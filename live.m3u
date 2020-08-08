@@ -47,7 +47,6 @@ http://10.16.100.203:8082/bangla/24newshd_720.m3u8
 http://10.16.100.203:8082/bangla/rtv.m3u8
 #EXTINF:-1,Somoy TV
 http://10.16.100.203:8082/bangla/somoy.m3u8
-
 #EXTINF:-1,Disney
 http://10.16.100.204:8080/tv204/Disney.m3u8
 #EXTINF:-1,DisneyXD
