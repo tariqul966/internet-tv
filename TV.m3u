@@ -1,0 +1,147 @@
+#EXTM3U
+#EXTINF:-1,Asian TV
+http://10.16.100.203:8082/bangla/tv_asian.m3u8
+#EXTINF:-1,ATN Bangla
+http://10.16.100.203:8082/bangla/atnbangla.m3u8
+#EXTINF:-1,ATN News
+http://10.16.100.203:8082/bangla/news_atn.m3u8
+#EXTINF:-1,Bangla Vision
+http://10.16.100.203:8082/bangla/banglavision.m3u8
+#EXTINF:-1,Bijoy TV
+http://10.16.100.203:8082/bangla/bijoytv.m3u8
+#EXTINF:-1,Boishakhi TV
+http://10.16.100.203:8082/bangla/boisakhi.m3u8
+#EXTINF:-1,BTV Sangshod
+http://10.16.100.203:8082/bangla/btvsangshodh.m3u8
+#EXTINF:-1,Channel 24
+http://10.16.100.203:8082/bangla/channel24.m3u8
+#EXTINF:-1,Channel i
+http://10.16.100.203:8082/bangla/i_Channel.m3u8
+#EXTINF:-1,Channel 9
+http://10.16.100.203:8082/bangla/CHANNEL9.m3u8
+#EXTINF:-1,DBC News
+http://10.16.100.203:8082/bangla/dbcnews.m3u8
+#EXTINF:-1,Desh TV
+http://10.16.100.203:8082/bangla/TV_desh720.m3u8
+#EXTINF:-1,DiGi Bangla24 
+http://10.16.100.203:8082/bangla/digibangla24.m3u8
+#EXTINF:-1,Ekatoor TV
+http://10.16.100.203:8082/bangla/ekatoortv.m3u8
+#EXTINF:-1,Ekushe TV
+http://10.16.100.203:8082/bangla/ekusheytv.m3u8
+#EXTINF:-1,GTV
+http://10.16.100.203:8082/bangla/gtv.m3u8
+#EXTINF:-1,Independent TV
+http://10.16.100.203:8082/bangla/news_independent.m3u8
+#EXTINF:-1,Jamuna TV
+http://10.16.100.203:8082/bangla/jamuna_720.m3u8
+#EXTINF:-1,Mohona TV
+http://10.16.100.203:8082/bangla/mohonatv.m3u8
+#EXTINF:-1,MyTV
+http://10.16.100.203:8082/bangla/mytv.m3u8
+#EXTINF:-1,NTV
+http://10.16.100.203:8082/bangla/ntv.m3u8
+#EXTINF:-1,News24
+http://10.16.100.203:8082/bangla/24newshd_720.m3u8
+#EXTINF:-1,RTV
+http://10.16.100.203:8082/bangla/rtv.m3u8
+#EXTINF:-1,Somoy TV
+http://10.16.100.203:8082/bangla/somoy.m3u8
+
+#EXTINF:-1,Disney
+http://10.16.100.204:8080/tv204/Disney.m3u8
+#EXTINF:-1,DisneyXD
+http://10.16.100.204:8080/tv204/disneyxd.m3u8
+#EXTINF:-1,Sony AY
+http://10.16.100.207:8082/sports/SONYYAY.m3u8
+#EXTINF:-1,Animal Planet
+http://10.16.100.204:8080/tv204/animalplanet_hd720.m3u8
+#EXTINF:-1,Discovery
+http://10.16.100.204:8080/tv204/discovery_hd720.m3u8
+#EXTINF:-1,Sony BBC Earth
+http://10.16.100.204:8080/tv204/sonybbcearth_hd720.m3u8
+#EXTINF:-1,TLC
+http://10.16.100.204:8080/tv204/tlc_720.m3u8
+#EXTINF:-1,&Tv
+http://10.16.100.204:8080/tv204/andtv_720.m3u8
+#EXTINF:-1,Colors TV
+http://10.16.100.204:8080/tv204/colors_india.m3u8
+#EXTINF:-1,Sony Entertainment
+http://10.16.100.204:8080/tv204/sonyentertainmnt_720.m3u8
+#EXTINF:-1,Star Plus
+http://10.16.100.204:8080/tv204/starplus.m3u8
+#EXTINF:-1,Zee TV
+http://10.16.100.204:8080/tv204/Zee_TV720.m3u8
+#EXTINF:-1,Akash Aath
+http://10.16.100.204:8080/tv204/akashaath_720.m3u8
+#EXTINF:-1,Colors Bangla
+http://10.16.100.204:8080/tv204/colors_bangla.m3u8
+#EXTINF:-1,Sony 8
+http://10.16.100.204:8080/tv204/sony_8.m3u8
+#EXTINF:-1,Star Jalsha
+http://10.16.100.204:8080/tv204/starjalsha.m3u8
+#EXTINF:-1,Zee Bangla
+http://10.16.100.204:8080/tv204/zee_bangla.m3u8
+#EXTINF:-1,&Pictures
+http://10.16.100.204:8080/tv204/AndPicturesTV.m3u8
+#EXTINF:-1,Lotus
+http://10.16.100.204:8080/tv204/lotus720.m3u8
+#EXTINF:-1,Set Max
+http://10.16.100.202:8080/tvs202/setmax_720.m3u8
+#EXTINF:-1,Set Max HD
+http://10.16.100.204:8080/tv204/setmax_hd720.m3u8
+#EXTINF:-1,Sony Pix
+http://10.16.100.204:8080/tv204/sony_pix720.m3u8
+#EXTINF:-1,WOW Cinema
+http://10.16.100.204:8080/tv204/wow_cinema.m3u8
+#EXTINF:-1,Zee Cinema HD
+http://10.16.100.204:8080/tv204/zeecinemahd.m3u8
+#EXTINF:-1,9XM Music
+http://10.16.100.207:8082/sports/9xm_music.m3u8
+#EXTINF:-1,Dhoom Music
+http://10.16.100.201:8082/hindi/dhoom_music.m3u8
+#EXTINF:-1,Music India
+http://10.16.100.207:8082/sports/musicindia.m3u8
+#EXTINF:-1,Sangeet Bangla
+http://10.16.100.207:8082/sports/sangeet_bangla.m3u8
+#EXTINF:-1,WOW Music
+http://10.16.100.201:8082/hindi/wow_music_720.m3u8
+#EXTINF:-1,Zee Bollywood
+http://10.16.100.201:8082/hindi/zeeetc_bollywood.m3u8
+#EXTINF:-1,Aljazeera
+http://10.16.100.207:8082/sports/aljazeera.m3u8
+#EXTINF:-1,DW TV
+http://10.16.100.241:82/exthls/dw_tv_asia720.m3u8
+#EXTINF:-1,Euro News
+http://10.16.100.207:8082/sports/euro_news.m3u8
+#EXTINF:-1,GEO News
+http://10.16.100.207:8082/sports/geonews_720.m3u8
+#EXTINF:-1,PTV Global
+http://10.16.100.207:8082/sports/ptvglobal_720.m3u8
+#EXTINF:-1,Quran TV
+http://10.16.100.207:8082/sports/qurantv.m3u8
+#EXTINF:-1,
+http://10.16.100.207:8082/sports/sunnahtv.m3u8
+#EXTINF:-1,Sony SIX
+http://10.16.100.241:82/exthls/sony_six_720.m3u8
+#EXTINF:-1,Sony SIX HD
+http://10.16.100.241:82/exthls/sony_six_hd720.m3u8
+#EXTINF:-1,Ten1
+http://10.16.100.207:8082/sports/ten1_720.m3u8
+#EXTINF:-1,Sony Ten
+http://10.16.100.207:8082/sports/sonyten1_hd.m3u8
+#EXTINF:-1,Ten2
+http://10.16.100.241:82/exthls/ten2_720.m3u8
+#EXTINF:-1,SOny Ten2
+http://10.16.100.241:82/exthls/sony_ten2_hd720.m3u8
+#EXTINF:-1,Sony Ten3
+http://10.16.100.241:82/exthls/sony_ten3_720.m3u8
+
+
+
+
+
+
+
+
+
