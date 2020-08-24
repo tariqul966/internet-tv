@@ -4,30 +4,50 @@ http://103.84.253.5/live/fastfeed1006/index.m3u8
 #EXTINF:-1,Sony Ten2
 http://103.84.253.5/live/fastfeed1004/index.m3u8
 #EXTINF:-1,Sangeet Bangla
-https://itpolly.iptv.digijadoo.net/live/sangeet_bangla/chuStar Gold
+https://itpolly.iptv.digijadoo.net/live/sangeet_bangla/chunks.m3u8
 #EXTINF:-1,Star Gold
 https://itpolly.iptv.digijadoo.net/live/star_gold/chunks.m3u8
 #EXTINF:-1,Jalsha Movies
 https://itpolly.iptv.digijadoo.net/live/jalsha_movies/chunks.m3u8
-https://itpolly.iptv.digijadoo.net/live/zee_bangla/chunks.m3u8
+#EXTINF:-1,Zee Bangla
+https://itpolly.iptv.digijadoo.net/live/zee_bangla/chunks.m3u8Colors Bangla
+#EXTINF:-1,Colors Bangla
 https://itpolly.iptv.digijadoo.net/live/colors_bangla/chunks.m3u8
+#EXTINF:-1,Colors Bangla HD
 https://itpolly.iptv.digijadoo.net/live/colors_bangla_hd/chunks.m3u8
+#EXTINF:-1,Star Jalsha HD
 https://itpolly.iptv.digijadoo.net/live/star_jalsha_hd/chunks.m3u8
+#EXTINF:-1,Star Plus
 https://itpolly.iptv.digijadoo.net/live/star_plus/chunks.m3u8
+#EXTINF:-1,Star Plus HD
 https://itpolly.iptv.digijadoo.net/live/star_plus_hd/chunks.m3u8
+#EXTINF:-1,Movies OK
 https://itpolly.iptv.digijadoo.net/live/movies_ok/chunks.m3u8
+#EXTINF:-1,Star Bharat
 https://itpolly.iptv.digijadoo.net/live/star_bharat/chunks.m3u8
+#EXTINF:-1,Zee TV
 https://itpolly.iptv.digijadoo.net/live/zee_tv/chunks.m3u8
+#EXTINF:-1,Zee Cinema
 https://itpolly.iptv.digijadoo.net/live/zee_cinema/chunks.m3u8
+#EXTINF:-1,Zee Classic
 https://edge01.iptv.digijadoo.net/live/zee_classic/chunks.m3u8
+#EXTINF:-1,Manoranjan
 https://itpolly.iptv.digijadoo.net/live/manoranjan/chunks.m3u8
+#EXTINF:-1,Zoom
 https://itpolly.iptv.digijadoo.net/live/zoom/chunks.m3u8
+#EXTINF:-1,Zing
 https://itpolly.iptv.digijadoo.net/live/zing/chunks.m3u8
+#EXTINF:-1,Colors Asia
 https://itpolly.iptv.digijadoo.net/live/colors_asia/chunks.m3u8
+#EXTINF:-1,Colors HD
 https://itpolly.iptv.digijadoo.net/live/colors_hd/chunks.m3u8
+#EXTINF:-1,Al Jazeera
 https://itpolly.iptv.digijadoo.net/live/al_jazeera/chunks.m3u8
+#EXTINF:-1,BBC World
 https://itpolly.iptv.digijadoo.net/live/bbc_world/chunks.m3u8
+#EXTINF:-1,CNN
 https://itpolly.iptv.digijadoo.net/live/cnn/chunks.m3u8
+#EXTINF:-1,NHK World
 https://itpolly.iptv.digijadoo.net/live/nhk_world/chunks.m3u8
 https://itpolly.iptv.digijadoo.net/live/bbc_lifestyle/chunks.m3u8
 https://itpolly.iptv.digijadoo.net/live/cbeebies_asia/chunks.m3u8
