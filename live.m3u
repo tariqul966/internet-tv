@@ -1,6 +1,6 @@
 #EXTM3U
 #EXTINF:-1,Asian TV
-http://10.16.100.203:8082/bangla/tv_asian.m3u8
+http://10.16.100.201:8082/bangla/asiAntv_local.m3u8
 #EXTINF:-1,ATN Bangla
 http://10.16.100.203:8082/bangla/atnbangla.m3u8
 #EXTINF:-1,ATN News
