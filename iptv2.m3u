@@ -21,18 +21,43 @@ https://tempx.jagobd.com:441/c5V6mmMyX7RpbEU9Mi8xNy8yMDEOGIDU6RgzQ6NTAgdEoaeFzbF
 
 
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/vr5zjesuwj7mom3/atnbangla.jpg?dl=0" tvg-name="ATN Bangla"  group-title="Bangla",ATN Bangla
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/f0qbrcvq8bb78bj/atn_news.png?dl=0" tvg-name="ATN News"  group-title="Bangla",ATN News
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/ddrlb66b7hjj1q0/starjalsha.png?dl=0" tvg-name="Star Jalsha"  group-title="Bangla",Star Jalsha
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/nfc6ujrrnbgj572/zeebanglacinema.png?dl=0" tvg-name="Zee Bangla Cinema"  group-title="Bangla",Zee Bangla Cinema
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/66njdltquchdvqv/zeebangla.png?dl=0" tvg-name="Zee Bangla"  group-title="Bangla",Zee Bangla
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/2aq6cz8w1tjdvpr/starsports1.png?dl=0" tvg-name="Star Sports1"  group-title="Sports",Star Sports1
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/wvo2xjq3ak73e4h/stargoldhd.png?dl=0" tvg-name="Star Gold"  group-title="Hindi",Star Gold
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/t5hlbj0q3btuoif/sonyten1.png?dl=0" tvg-name="Sony Ten1"  group-title="Sports",Sony Ten1
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/6btnvse8acdxi5y/sony8.png?dl=0" tvg-name="Sony Aath"  group-title="Bangla",Sony Aath
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/yfsse0wk59zf5eu/sangeetbangla.png?dl=0" tvg-name="Sangeet Bangla"  group-title="Music",Sangeet Bangla
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/ogf3i35n9bx9bhl/rtv.png?dl=0" tvg-name="RTV"  group-title="Bangla",RTV
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/5ujmgq0jwk2snta/zee-action.jpg?dl=0" tvg-name="Zee Action"  group-title="Hindi",Zee Action
+http://103.81.104.118/hls/stream21.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/uh0wehmhhg7l9lq/zeecinema.png?dl=0" tvg-name="Zee Cinema"  group-title="Hindi",Zee Cinema
+http://103.81.104.118/hls/stream21.m3u8
 
 
 
