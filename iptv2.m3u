@@ -1,11 +1,11 @@
 
-#EXTINF:-1, tvg-language="Bangla" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/thumb/9/91/Channel24logo.svg/1200px-Channel24logo.svg.png" tvg-name="Channel 24"  group-title="Bangla",Channel 24
+#EXTINF:-1, tvg-name="Channel 24"  group-title="Bangla",Channel 24
 http://103.81.104.118/hls/stream22.m3u8
 
-#EXTINF:-1, tvg-language="Bangla" tvg-logo="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGiPKJl-GBKejJrAJG_5X150y8lGVVRnoCR_O7VP2rVNqr64haBBx10pSJwrJKZdDqpDc&usqp=CAU" tvg-name=" Channel S"  group-title="Bangla", Channel S
+#EXTINF:-1, tvg-name=" Channel S"  group-title="Bangla", Channel S
 https://a.jsrdn.com/r-373576a3/publish/22679_24MrQma9TX/index.m3u8
 
-#EXTINF:-1, tvg-language="Bangla" tvg-logo="https://upload.wikimedia.org/wikipedia/commons/9/9f/DBC_News_logo.png" tvg-name="DBC News"  group-title="Bangla",DBC News
+#EXTINF:-1, tvg-name="DBC News"  group-title="Bangla",DBC News
 https://live.jagobd.com:444/c3VydmVyX8RpbEU9Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/dbcnews.stream/playlist.m3u8?wmsAuthSign=c2VydmVyX3RpbWU9MS8yMi8yMDIxIDM6MzQ6MjQgUE0maGFzaF92YWx1ZT1mdVdtWlhUaVZpZEZwbjg1cWQzZXRnPT0mdmFsaWRtaW51dGVzPTYw
 
 #EXTINF:-1, tvg-language="Bangla" tvg-logo="https://ssl.com.bd/sites/default/files/ekushe%20tv.png" tvg-name="Ekushey TV"  group-title="Bangla",Ekushey TV
