@@ -1,3 +1,13 @@
+
+#EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/vr5zjesuwj7mom3/atnbangla.jpg?dl=0" tvg-name="ATN Bangla"  group-title="Bangla",ATN Bangla
+http://103.81.104.118/hls/stream21.m3u8
+
+#EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/f0qbrcvq8bb78bj/atn_news.png?dl=0" tvg-name="ATN News"  group-title="Bangla",ATN News
+http://103.81.104.118/hls/stream21.m3u8
+
+#EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/8ps6iwmmb62s3g2/anondo-tv.png?dl=0" group-title="Bangla",Anando TV
+https://tempx.jagobd.com:441/c5V6mmMyX7RpbEU9Mi8xNy8yMDEOGIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PT0mdFsaWRtaW51aiPhnPTI/anandatv.stream/chunks.m3u8
+
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/n8p7fpvubsnzc2v/channel24.png?dl=0" tvg-name="Channel 24"  group-title="Bangla",Channel 24
 http://103.81.104.118/hls/stream22.m3u8
 
@@ -16,15 +26,6 @@ http://103.81.104.118/hls/stream21.m3u8
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/zm2j17kfo0c4294/ntv.png?dl=0" tvg-name="NTV"  group-title="Bangla",NTV
 https://bdsl.jagobd.com:444/c2VydmVyX6RpbEU8Mi8xNy8yMDE0GIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PTOmdFsaWRtaW51aiPhnPTI/ntvuk00332211.stream/chunks.m3u8
 
-#EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/8ps6iwmmb62s3g2/anondo-tv.png?dl=0" group-title="Bangla",Anando TV
-https://tempx.jagobd.com:441/c5V6mmMyX7RpbEU9Mi8xNy8yMDEOGIDU6RgzQ6NTAgdEoaeFzbF92YWxIZTO0U0ezN1IzMyfvcGVMZEJCTEFWeVN3PT0mdFsaWRtaW51aiPhnPTI/anandatv.stream/chunks.m3u8
-
-
-#EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/vr5zjesuwj7mom3/atnbangla.jpg?dl=0" tvg-name="ATN Bangla"  group-title="Bangla",ATN Bangla
-http://103.81.104.118/hls/stream21.m3u8
-
-#EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/f0qbrcvq8bb78bj/atn_news.png?dl=0" tvg-name="ATN News"  group-title="Bangla",ATN News
-http://103.81.104.118/hls/stream21.m3u8
 
 #EXTINF:0 tvg-logo="https://dl.dropboxusercontent.com/s/ddrlb66b7hjj1q0/starjalsha.png?dl=0" tvg-name="Star Jalsha"  group-title="Bangla",Star Jalsha
 http://103.81.104.118/hls/stream21.m3u8
