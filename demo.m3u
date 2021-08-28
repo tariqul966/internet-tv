@@ -1,8 +1,15 @@
+#EXTM3U
+#EXTINF:-1,Gazi TV
 http://tv.aliflailabd.com:8989/gazi-tv/index.m3u8
+#EXTINF:-1,Jamuna TV
 http://tv.aliflailabd.com:8989/jamuna-tv/index.m3u8
+#EXTINF:-1,Somoy TV
 http://tv.aliflailabd.com:8989/somoy-tv/index.m3u8
+#EXTINF:-1,Deepto TV
 http://tv.aliflailabd.com:8989/depto-bangla/index.m3u8
+#EXTINF:-1,Channel i
 http://tv.aliflailabd.com:8989/channel-i/index.m3u8
+#EXTINF:-1,News 24
 http://tv.aliflailabd.com:8989/news24-hd/index.m3u8
 http://tv.aliflailabd.com:8989/maasranga/index.m3u8
 http://tv.aliflailabd.com:8989/channel24/index.m3u8
