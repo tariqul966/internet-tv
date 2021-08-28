@@ -11,57 +11,97 @@ http://tv.aliflailabd.com:8989/depto-bangla/index.m3u8
 http://tv.aliflailabd.com:8989/channel-i/index.m3u8
 #EXTINF:-1,News 24
 http://tv.aliflailabd.com:8989/news24-hd/index.m3u8
+#EXTINF:-1,Maasranga TV
 http://tv.aliflailabd.com:8989/maasranga/index.m3u8
+#EXTINF:-1,Channel24
 http://tv.aliflailabd.com:8989/channel24/index.m3u8
+#EXTINF:-1,Independent TV
 http://tv.aliflailabd.com:8989/independent-tv/index.m3u8
+#EXTINF:-1,BTV
 http://tv.aliflailabd.com:8989/btv/index.m3u8
+#EXTINF:-1,RTV
 http://tv.aliflailabd.com:8989/rtv/index.m3u8
+#EXTINF:-1,NTV
 http://tv.aliflailabd.com:8989/ntv/index.m3u8
+#EXTINF:-1,BanglaVision
 http://tv.aliflailabd.com:8989/bangla-vision/index.m3u8
+#EXTINF:-1,ATN Bangla
 http://tv.aliflailabd.com:8989/atn-bangla/index.m3u8
+#EXTINF:-1,Channel9
 http://tv.aliflailabd.com:8989/channel9/index.m3u8
+#EXTINF:-1,DBC News
 http://tv.aliflailabd.com:8989/dbc-news/index.m3u8
+#EXTINF:-1,Depto TV
 http://tv.aliflailabd.com:8989/depto-bangla/index.m3u8
+#EXTINF:-1,Ekattor TV
 http://tv.aliflailabd.com:8989/ekattor/index.m3u8
+#EXTINF:-1,Boishakhi TV
 http://tv.aliflailabd.com:8989/boishakhi-tv/index.m3u8
+#EXTINF:-1,Nagorik TV
 http://tv.aliflailabd.com:8989/nagorik-tv/index.m3u8
+#EXTINF:-1,SA TV
 http://tv.aliflailabd.com:8989/satv/index.m3u8
+#EXTINF:-1,My TV
 http://tv.aliflailabd.com:8989/my-tv/index.m3u8
+#EXTINF:-1,ATN Islamic TV
 http://tv.aliflailabd.com:8989/atnislamictv/index.m3u8
+#EXTINF:-1,Bangla TV
 http://tv.aliflailabd.com:8989/bangla-tv/index.m3u8
+#EXTINF:-1,ATN News
 http://tv.aliflailabd.com:8989/atn-news/index.m3u8
-
+#EXTINF:-1,Sony Six
 http://tv.aliflailabd.com:8989/sony-six-hd/index.m3u8
-
+#EXTINF:-1,Sony Aath
 http://tv.aliflailabd.com:8989/sony-aath/index.m3u8
+#EXTINF:-1,Zee Bangla
 http://tv.aliflailabd.com:8989/zee-bangla/index.m3u8
+#EXTINF:-1,Zee Cinema
 http://tv.aliflailabd.com:8989/zee-cinema/index.m3u8
+#EXTINF:-1,Star Jalsha
 http://tv.aliflailabd.com:8989/star-jalsha/index.m3u8
+#EXTINF:-1,Jalsha Movies
 http://tv.aliflailabd.com:8989/jalsha-movies/index.m3u8
-
+#EXTINF:-1,Star Plus
 http://tv.aliflailabd.com:8989/star-plus/index.m3u8
+#EXTINF:-1,Colors HD
 http://tv.aliflailabd.com:8989/colors-hd/index.m3u8
+#EXTINF:-1,Sony HD
 http://tv.aliflailabd.com:8989/sony-hd/index.m3u8
+#EXTINF:-1,Set Max
 http://tv.aliflailabd.com:8989/setmax/index.m3u8
+#EXTINF:-1,Zee TV
 http://tv.aliflailabd.com:8989/zeetv/index.m3u8
+#EXTINF:-1,Zee Cinema
 http://tv.aliflailabd.com:8989/zee-cinema/index.m3u8
-
+#EXTINF:-1,Duronto TV
 http://tv.aliflailabd.com:8989/duronto-tv/index.m3u8
+#EXTINF:-1,Nick
 http://tv.aliflailabd.com:8989/nick/index.m3u8
-
+#EXTINF:-1,National Geographic
 http://tv.aliflailabd.com:8989/natgeo-wild/index.m3u8
+#EXTINF:-1,Discovery
 http://tv.aliflailabd.com:8989/discovery/index.m3u8
+#EXTINF:-1,TLC
 http://tv.aliflailabd.com:8989/tlc-hd/index.m3u8
-
+#EXTINF:-1,HBO
 http://tv.aliflailabd.com:8989/hbo/index.m3u8
+#EXTINF:-1,AXN
 http://tv.aliflailabd.com:8989/axn-hd/index.m3u8
+#EXTINF:-1,Star Movies
 http://tv.aliflailabd.com:8989/star-movies-hd/index.m3u8
+#EXTINF:-1,Sony PIX
 http://tv.aliflailabd.com:8989/sony-pix-hd/index.m3u8
+#EXTINF:-1,BBC World
 http://tv.aliflailabd.com:8989/bbc-world/index.m3u8
+#EXTINF:-1,MN TV
 http://tv.aliflailabd.com:8989/mn-hd/index.m3u8
+#EXTINF:-1,Set Max
 http://tv.aliflailabd.com:8989/setmax/index.m3u8
-
+#EXTINF:-1,GaanBangla
 http://tv.aliflailabd.com:8989/gaanbangla/index.m3u8
+#EXTINF:-1,RTV Music
 http://tv.aliflailabd.com:8989/rtvmusic/index.m3u8
+#EXTINF:-1,9XM
 http://tv.aliflailabd.com:8989/9xm/index.m3u8
+#EXTINF:-1,Sangeet Bangla
 http://tv.aliflailabd.com:8989/sangeet-bangla/index.m3u8
