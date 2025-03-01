@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <title>LIVE-TV</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/video-js.min.css" rel="stylesheet">
+    <script src="js/video.min.js"></script>
+    <script src="js/videojs-contrib-hls.min.js"></script>
+</head>
+
+<body>
+    <script>
+        function geeks() {
+            let x = document.domain;
+            document.getElementById("sudo").innerHTML = x;
+        }
+    </script>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-10 tv-screen col-md-offset-1">
+                <div class="col-md-10">
+                    <div class="row">
+                        <video-js id="player" class="video-js vjs-default-skin vjs-big-play-centered" loop muted=true autoplay="autoplay" source src="http://kst.moonplex.net:8080/CH1/index.m3u8" type="application/x-mpegURL" controls preload="auto" data-setup='{"fluid": true,"autoplay": true}'
+                            poster="">
+                            <source src="http://kst.moonplex.net:8080/CH1/index.m3u8" type="application/x-mpegURL">
+                        </video-js>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <div class="row">
+                        <div class="thumbnail-slider">
+                            <ul id="listbar">
+
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH1/index.m3u8"><img src="img/logo/Sony_Max.png"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH2/index.m3u8"><img src="img/logo/t-sports.jpg"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH3/index.m3u8"><img src="img/logo/star-jalsha.jpg"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH4/index.m3u8"><img src="img/logo/zee-bangla.jpg"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH5/index.m3u8"><img src="img/logo/Deepto-tv-live.png"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH6/index.m3u8"><img src="img/logo/channel9-hd.jpg"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH7/index.m3u8"><img src="img/logo/Ekhon_Logo.png"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH8/index.m3u8"><img src="img/logo/BBC-CBeebies.png"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH9/index.m3u8"><img src="img/logo/Discovery-channel.png"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH10/index.m3u8"><img src="img/logo/ARY-News.jpg"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH11/index.m3u8"><img src="img/logo/BBC_Earth_logo.png"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH12/index.m3u8"><img src="img/logo/duronto-tv.jpg"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH13/index.m3u8"><img src="img/logo/9xm.jpg"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH14/index.m3u8"><img src="img/logo/Al-Jazeera.png"></a></li>
+                                <li><a class="playignitor vertical-align" href="javascript:void(0)" data-source="http://kst.moonplex.net:8080/CH15/index.m3u8"><img src="img/logo/cnn.png"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
