@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IPTV</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; display: flex; justify-content: center; align-items: center; height: 100vh; margin: 0; background-color: #e9ecef; }
+        .login-card { background: #fff; padding: 30px; border-radius: 12px; box-shadow: 0 10px 25px rgba(0,0,0,0.1); width: 350px; text-align: center; }
+        h2 { color: #333; margin-bottom: 20px; }
+        input { width: 100%; padding: 12px; margin: 10px 0; border: 1px solid #ddd; border-radius: 6px; box-sizing: border-box; }
+        button { width: 100%; padding: 12px; background-color: #007bff; color: white; border: none; border-radius: 6px; cursor: pointer; font-size: 16px; transition: 0.3s; }
+        button:hover { background-color: #0056b3; }
+        #error-msg { color: #dc3545; font-size: 14px; min-height: 20px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+
+    <div class="login-card">
+        <h2>Login</h2>
+        <div id="error-msg"></div>
+        <input type="text" id="username" placeholder="Username">
+        <input type="password" id="password" placeholder="Password">
+        <button onclick="validateAndRedirect()">Login</button>
+    </div>
+
+    <script>
+        // আপনার পছন্দের ইউজারনেম, পাসওয়ার্ড এবং গন্তব্য লিঙ্ক এখানে দিন
+        const CONFIG = {
+            validUser: "admin",
+            validPass: "12345",
+			validUser: "rion",
+            validPass: "rion@786",
+            redirectUrl: "home01.html" // এখানে আপনার ওয়েবসাইটের লিঙ্ক দিন (যেমন: home.html)
+        };
+
+        function validateAndRedirect() {
+            const user = document.getElementById('username').value;
+            const pass = document.getElementById('password').value;
+            const errorElement = document.getElementById('error-msg');
+
+            if (user === CONFIG.validUser && pass === CONFIG.validPass) {
+                errorElement.style.color = "#28a745";
+                errorElement.innerText = "লগইন সফল! রিডাইরেক্ট হচ্ছে...";
+                
+                // ১ সেকেন্ড পর অন্য পেজে নিয়ে যাবে
+                setTimeout(() => {
+                    window.location.href = CONFIG.redirectUrl;
+                }, 1000);
+            } else {
+                errorElement.style.color = "#dc3545";
+                errorElement.innerText = "ভুল তথ্য! আবার চেষ্টা করুন।";
+            }
+        }
+    </script>
+</body>
+</html>
