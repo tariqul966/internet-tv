@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta http-equiv="Cache-Control" content="no-cache" />
+    <meta http-equiv="content-language" content="en" />
+    <meta name="robots" content="index, follow">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=yes, viewport-fit=cover">
+    <meta name="theme-color" content="" />
+    <title>TvPro - Player</title>
+    <meta name="description" content="TvPro: Watch Modern Live TV for Free" />
+    <link rel="canonical" href="https://tvpro.wapka.site" />
+    <link rel="shortcut icon" href="https://wapka-img.zuna.id/b5a03aef.ico" />
+    <meta property="og:site_name" content="TvPro - Player" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="TvPro - Player" />
+    <meta property="og:description" content="TvPro: Watch Modern Live TV for Free" />
+    <meta property="og:url" content="https://tvpro.wapka.site" />
+    <meta property="og:image" content="https://wapka-img.zuna.id/5180b537.jpeg" />
+    <meta name="theme-color" content="#e63946" />
+    <meta name="keywords" content="IPTV,Live TV,BDIX TV, Bangla Live TV, Sports Live, Online TV, Kolkata TV, Streaming,Free IPTV Bangladesh,HD TV,Fancode">
+    <meta name="author" content="Shawon">
+    <meta name="robots" content="index, follow">
+    <!-- External Scripts -->
+    <script src="hls.js@latest"></script>
+    <link rel="stylesheet" href="all.min.css">
+    <link href="css2.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <script type="text/javascript">
+        let WapkaSiteAPI = {
+            "apikey": "90303:58acg17l5vu5u3qumc75c29glt"
+        }
+    </script>
+    <script async type="text/javascript" src="wapka_lib.js"></script>
+    <script>
+        setTimeout(() => {
+            fetch('track.html', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify({
+                    type: 'impression',
+                    ad_type: 'banner',
+                    advertiser_id: 1,
+                    ad_id: 1,
+                    page_url: window.location.href,
+                    referrer: document.referrer,
+                    screen_resolution: screen.width + 'x' + screen.height,
+                    browser_language: navigator.language,
+                    timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+                    utm_source: window.location.host
+                })
+            });
+        }, 1500); // 1.5s delay
+    </script>
+
+    <div id="loading-screen">
+        <div class="loader-ring"></div>
+        <div class="loader-text">TVPro</div>
+        <div class="loader-sub">IPTV Engine Starting...</div>
+    </div>
+
+    <div id="app">
+        <video id="video-player" autoplay playsinline></video>
+        <iframe id="iframe-player" allowfullscreen allow="autoplay; encrypted-media; fullscreen" style="display:none"></iframe>
+
+        <div id="home-screen">
+            <div class="home-header">
+                <div class="logo"><i class="fas fa-satellite-dish"></i> TVPro</div>
+                <div class="header-search"><i class="fas fa-search"></i><input type="text" id="home-search" placeholder="Search channels..." autocomplete="off"></div>
+                <div class="header-actions">
+                    <button class="hdr-btn focusable" id="btn-add-playlist"><i class="fas fa-plus"></i> Add</button>
+                    <button class="hdr-btn focusable" id="btn-manage-playlist"><i class="fas fa-cog"></i> Manage</button>
+                    <button class="hdr-btn focusable" id="btn-settings" title="Settings"><i class="fas fa-palette"></i> Settings</button>
+                </div>
+            </div>
+            <div class="scan-bar-wrap" id="scan-bar-wrap">
+                <div class="scan-bar-top"><span id="scan-status">Scanning...</span><button id="scan-stop-btn">Stop</button></div>
+                <div class="scan-progress">
+                    <div class="scan-progress-fill" id="scan-fill"></div>
+                </div>
+            </div>
+            <div class="source-bar" id="source-bar"></div>
+            <div class="home-content">
+                <div class="cat-sidebar">
+                    <div class="cat-scan-section"><button class="scan-btn" id="scan-btn"><i class="fas fa-satellite-dish"></i> Scan Status</button></div>
+                    <div class="cat-list" id="cat-list"></div>
+                </div>
+                <div class="channel-area" id="channel-area">
+                    <div class="channel-area-header">
+                        <h2 id="area-title">All Channels</h2>
+                        <div class="server-filter" id="server-filter"></div>
+                    </div>
+                    <div class="channel-grid" id="channel-grid"></div>
+                </div>
+            </div>
+        </div>
+
+        <div id="player-ui">
+            <div class="player-glow"></div>
+            <div class="p-state-overlay" id="p-loading">
+                <div class="p-loader-ring"></div>
+                <div class="p-state-text">Loading Channel...</div>
+            </div>
+            <div class="p-state-overlay" id="p-error"><i class="fas fa-exclamation-triangle p-state-icon error"></i>
+                <div class="p-state-text">Channel Not Working</div>
+                <div class="p-state-sub">Auto-switching to next channel...</div>
+            </div>
+
+            <div class="p-top-bar hidden-bar" id="p-top-bar">
+                <div class="p-ch-logo" id="p-ch-logo"></div>
+                <div class="p-channel-info">
+                    <div class="p-ch-name" id="p-ch-name">No Channel</div>
+                    <div class="p-ch-sub">
+                        <div class="p-status-dot unknown" id="p-status-dot"></div><span class="p-ch-group" id="p-ch-group">--</span><span class="p-server-tag" id="p-server-tag">--</span></div>
+                </div>
+                <div class="p-top-right">
+                    <span class="p-time" id="p-time">00:00</span>
+                    <button class="ctrl-btn focusable" id="p-list-btn" title="Channel List"><i class="fas fa-list"></i></button>
+                    <button class="ctrl-btn focusable" id="p-home-btn" title="Home"><i class="fas fa-home"></i></button>
+                </div>
+            </div>
+
+            <div class="p-ch-float p-ch-float-left focusable" id="p-float-prev" title="Channel Down"><i class="fas fa-chevron-left"></i></div>
+            <div class="p-ch-float p-ch-float-right focusable" id="p-float-next" title="Channel Up"><i class="fas fa-chevron-right"></i></div>
+
+            <div class="p-bottom-bar hidden-bar" id="p-bottom-bar">
+                <div class="p-controls-row">
+                    <button class="ctrl-btn focusable" id="p-prev-btn" title="Previous"><i class="fas fa-step-backward"></i></button>
+                    <button class="ctrl-btn ctrl-play focusable" id="p-play-btn" title="Pause"><i class="fas fa-pause" id="p-play-icon"></i></button>
+                    <button class="ctrl-btn focusable" id="p-next-btn" title="Next"><i class="fas fa-step-forward"></i></button>
+                    <div class="p-vol-row"><i class="fas fa-volume-up" id="p-vol-icon"></i><input type="range" id="p-vol-slider" min="0" max="100" value="80"></div>
+                    <div class="menu-wrap" id="quality-wrap"><button class="menu-btn focusable" id="quality-btn"><i class="fas fa-cog"></i> <span id="quality-label">Auto</span> <i class="fas fa-chevron-up"></i></button>
+                        <div class="popup-menu" id="quality-menu"></div>
+                    </div>
+                </div>
+                <div class="p-secondary-row">
+                    <button class="p-sec-btn focusable" id="p-fav-btn"><i class="far fa-heart"></i> Favorite</button>
+                    <button class="p-sec-btn focusable" id="p-info-btn"><i class="fas fa-info-circle"></i> Info</button>
+                    <button class="p-sec-btn focusable" id="p-last-btn"><i class="fas fa-history"></i> Last CH</button>
+                    <button class="p-sec-btn focusable" id="p-fullscreen-btn"><i class="fas fa-expand"></i> Fullscreen</button>
+                    <button class="p-sec-btn focusable" id="p-pip-btn"><i class="fas fa-clone"></i> PiP</button>
+                    <div class="menu-wrap" id="view-wrap" style="margin-left:0"><button class="menu-btn focusable" id="view-btn"><i class="fas fa-expand-arrows-alt"></i> <span id="view-label">Fit</span> <i class="fas fa-chevron-up"></i></button>
+                        <div class="popup-menu" id="view-menu"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-channel-list" id="p-channel-list">
+                <div class="p-cl-header">
+                    <div class="p-cl-header-top">
+                        <h3>Channels</h3><button class="p-cl-close" id="p-cl-close"><i class="fas fa-times"></i></button></div>
+                    <div class="p-cl-search"><i class="fas fa-search"></i><input type="text" id="p-cl-search" placeholder="Search..." autocomplete="off"></div>
+                    <div class="p-cl-cats" id="p-cl-cats"></div>
+                </div>
+                <div class="p-cl-list" id="p-cl-list"></div>
+            </div>
+
+            <div id="ch-num-display">
+                <div class="ch-num-digits" id="ch-num-digits">--</div>
+                <div class="ch-num-label">Channel Number</div>
+            </div>
+            <div id="info-overlay">
+                <div class="info-row"><span class="info-label">Channel</span><span class="info-value" id="info-name">--</span></div>
+                <div class="info-row"><span class="info-label">Category</span><span class="info-value" id="info-group">--</span></div>
+                <div class="info-row"><span class="info-label">Server</span><span class="info-value" id="info-server">--</span></div>
+                <div class="info-row"><span class="info-label">Quality</span><span class="info-value" id="info-quality">--</span></div>
+                <div class="info-row"><span class="info-label">View</span><span class="info-value" id="info-view">Fit</span></div>
+                <div class="info-row"><span class="info-label">Status</span><span class="info-value" id="info-status">--</span></div>
+                <div class="info-row"><span class="info-label">Number</span><span class="info-value" id="info-num">--</span></div>
+            </div>
+        </div>
+
+        <div id="settings-overlay"></div>
+        <div id="settings-panel">
+            <div class="settings-title">Settings <button class="settings-close" id="settings-close"><i class="fas fa-times"></i></button></div>
+            <div class="settings-section">
+                <div class="settings-section-label">Playback</div>
+                <div class="toggle-row" id="toggle-auto-next">
+                    <span>Auto-Next on Error</span>
+                    <div class="toggle-switch" id="auto-next-switch">
+                        <div class="toggle-knob"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="settings-section">
+                <div class="settings-section-label">Theme</div>
+                <div class="theme-options" id="theme-options">
+                    <div class="theme-opt" data-theme="dark">
+                        <div class="theme-swatch swatch-dark"></div><span>Dark</span></div>
+                    <div class="theme-opt" data-theme="white">
+                        <div class="theme-swatch swatch-white"></div><span>White</span></div>
+                    <div class="theme-opt" data-theme="black">
+                        <div class="theme-swatch swatch-black"></div><span>Black (OLED)</span></div>
+                </div>
+            </div>
+            <div class="settings-section">
+                <div class="settings-section-label">Accent Color</div>
+                <div class="accent-options" id="accent-options">
+                    <div class="accent-opt accent-red" data-accent="red"></div>
+                    <div class="accent-opt accent-green" data-accent="green"></div>
+                    <div class="accent-opt accent-violet" data-accent="violet"></div>
+                    <div class="accent-opt accent-orange" data-accent="orange"></div>
+                </div>
+            </div>
+
+            <div class='counter'>
+                Online:
+                <script type="text/javascript" src="online_t.js"></script>
+                <script type="text/javascript">
+                    sc_online_t(1674958, "", "");
+                </script><br> Toal Visitor:
+                <script type="text/javascript" src="texthit.js"></script>
+                <script type="text/javascript">
+                    var sc_texthit_var = sc_texthit_var || [];
+                    sc_text_hit(1734649, "", "170ddb");
+                </script>
+            </div>
+
+
+        </div>
+
+        <div class="modal-overlay" id="modal-add">
+            <div class="modal">
+                <h2 id="modal-add-title"><i class="fas fa-plus-circle" style="color:var(--accent)"></i> Add Playlist Source</h2>
+                <label>Source Name</label><input type="text" id="add-name" placeholder="e.g. My Playlist">
+                <div class="or-divider">From File</div>
+                <div class="file-input-wrap">
+                    <label for="add-file"><i class="fas fa-folder-open"></i> Browse</label>
+                    <input type="file" id="add-file" accept=".txt,.json,.m3u,.m3u8,.js,.html">
+                    <span class="file-input-name" id="add-file-name">No file selected</span>
+                </div>
+                <div class="or-divider">From URL</div>
+                <label>M3U / JSON / M3U8 URL</label><input type="text" id="add-url" placeholder="https://example.com/playlist.m3u OR .php .json .m3u8">
+                <div class="or-divider">Paste Content</div>
+                <label>Or paste playlist content</label><textarea id="add-content" style="height:90px;resize:vertical;font-family:monospace;font-size:.72rem" placeholder="#EXTM3U or JSON array..."></textarea>
+                <div class="modal-actions"><button class="btn-secondary" id="add-cancel">Cancel</button><button class="btn-primary" id="add-confirm">Add Source</button></div>
+            </div>
+        </div>
+
+        <div class="modal-overlay" id="modal-manage">
+            <div class="modal">
+                <h2><i class="fas fa-list" style="color:var(--accent)"></i> Manage Sources</h2>
+                <div id="manage-list" style="max-height:55vh;overflow-y:auto;margin-top:14px"></div>
+                <div class="modal-actions"><button class="btn-secondary" id="manage-close">Close</button></div>
+            </div>
+        </div>
+
+        <div id="toast-container"></div>
+    </div>
+
+    <script src="link"></script>
+    <script src="data"></script>
+    <script src="app"></script>
+</body>
+
+</html>
