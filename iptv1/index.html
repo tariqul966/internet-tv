@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LIVE TV</title>
+<script src="hls.js@latest"></script>
+
+<style>
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body{
+    background: #000;
+    color: white;
+    overflow-x: hidden;
+}
+
+/* HEADER */
+.header{
+    background: #000;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid red;
+}
+
+.header h1{
+    font-size: 28px;
+    color: white;
+    letter-spacing: 1px;
+}
+
+/* PLAYER BOX */
+.player-box{
+    position: relative;
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    background: black;
+}
+
+/* BIGGER VIDEO PLAYER */
+video{
+    width: 100%;
+    height: 500px;
+    background: black;
+    object-fit: contain;
+    box-shadow: 0 4px 20px rgba(255, 0, 0, 0.15);
+}
+
+/* PLAYER CONTROLS */
+.custom-controls{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    gap: 25px;
+    z-index: 10;
+    transition: opacity .5s;
+}
+
+.control-btn{
+    width: 65px;
+    height: 65px;
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 0, 0, 0.85);
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.1s;
+}
+
+.control-btn:hover {
+    background: red;
+    transform: scale(1.05);
+}
+
+/* CAROUSEL WRAPPER WITH BUTTONS */
+.carousel-container {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 25px 40px; /* প্লেয়ার থেকে গ্যাপ বাড়ানোর জন্য প্যাডিং অ্যাডজাস্ট করা হয়েছে */
+    display: flex;
+    align-items: center;
+}
+
+/* LIST BUTTONS */
+.nav-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 35px;
+    height: 100px;
+    background: rgba(17, 17, 17, 0.85);
+    border: 1px solid #333;
+    color: white;
+    font-size: 20px;
+    cursor: pointer;
+    z-index: 5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    transition: all 0.2s;
+}
+
+.nav-btn:hover {
+    background: red;
+    border-color: red;
+}
+
+.prev-btn { left: 5px; }
+.next-btn { right: 5px; }
+
+/* CHANNEL CAROUSEL LIST */
+.channel-carousel {
+    width: 100%;
+    display: flex;
+    gap: 15px;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+}
+
+/* CHANNEL CARD */
+.channel{
+    flex: 0 0 160px;
+    background: #111;
+    border-radius: 12px;
+    padding: 10px;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    cursor: pointer;
+    transition: all .3s ease;
+    border: 1px solid #333;
+}
+
+.channel:hover{
+    transform: translateY(-4px);
+    border-color: red;
+}
+
+.channel img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+/* ACTIVE CHANNEL */
+.channel.active{
+    border-color: red;
+    background: #1a0000;
+    box-shadow: inset 0 0 10px rgba(255, 0, 0, 0.3);
+}
+
+/* FOOTER */
+.footer{
+    text-align: center;
+    padding: 25px;
+    font-size: 16px;
+    border-top: 1px solid #222;
+    margin-top: 30px;
+    color: #666;
+}
+
+.footer span{
+    color: red;
+    font-weight: bold;
+}
+
+/* RESPONSIVE DESIGN */
+@media(max-width: 900px){
+    video {
+        height: 380px;
+    }
+}
+
+@media(max-width: 600px){
+    video {
+        height: 240px;
+    }
+
+    .carousel-container {
+        padding: 20px 35px;
+    }
+
+    .nav-btn {
+        width: 30px;
+        height: 80px;
+        font-size: 16px;
+    }
+
+    .channel{
+        flex: 0 0 130px;
+        height: 80px;
+        border-radius: 8px;
+        padding: 6px;
+    }
+    
+    .control-btn{
+        width: 55px;
+        height: 55px;
+        font-size: 20px;
+    }
+
+    .header h1 {
+        font-size: 22px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- HEADER -->
+<!--<div class="header">
+    <h1>LIVE TV</h1>
+</div>-->
+
+<!-- PLAYER -->
+<div class="player-box">
+    <video id="video" autoplay controls></video>
+
+    <!-- BUTTONS -->
+    <div class="custom-controls">
+        <button class="control-btn" onclick="prevChannel()">⏮</button>
+        <button class="control-btn" onclick="togglePlay()">⏯</button>
+        <button class="control-btn" onclick="nextChannel()">⏭</button>
+    </div>
+</div>
+
+<!-- CHANNELS CAROUSEL WRAPPER -->
+<div class="carousel-container">
+    <button class="nav-btn prev-btn" onclick="scrollCarousel(-1)">❮</button>
+    
+    <div class="channel-carousel" id="channelGrid"></div>
+    
+    <button class="nav-btn next-btn" onclick="scrollCarousel(1)">❯</button>
+</div>
+
+<!-- FOOTER -->
+<div class="footer">
+    © 2026 <span>LIVE TV</span>
+</div>
+
+<script>
+/* PLAYLIST */
+const playlist = 'https://raw.githubusercontent.com/Rakib49/Rakibiptv/refs/heads/main/aynaott.m3u';
+
+/* VARIABLES */
+let channels = [];
+let currentIndex = 0;
+
+/* LOAD PLAYLIST */
+fetch(playlist)
+.then(response => response.text())
+.then(data => {
+    const lines = data.split('\n');
+    for(let i=0; i<lines.length; i++){
+        if(lines[i].startsWith('#EXTINF')){
+            const info = lines[i];
+            const url = lines[i+1];
+            const name = info.split(',')[1];
+            let logo = '';
+            const logoMatch = info.match(/tvg-logo="(.*?)"/);
+            if(logoMatch){
+                logo = logoMatch[1];
+            }
+            channels.push({ name, url, logo });
+        }
+    }
+    renderChannels();
+    if(channels.length > 0){
+        playChannel(0);
+    }
+});
+
+/* RENDER */
+function renderChannels(){
+    const grid = document.getElementById('channelGrid');
+    grid.innerHTML = '';
+    channels.forEach((ch, index)=>{
+        const div = document.createElement('div');
+        div.className = 'channel';
+        div.innerHTML = `<img src="${ch.logo}" alt="${ch.name}">`;
+        div.onclick = () => playChannel(index);
+        grid.appendChild(div);
+    });
+}
+
+/* PLAY */
+function playChannel(index){
+    currentIndex = index;
+    const video = document.getElementById('video');
+    const channel = channels[index];
+
+    if(Hls.isSupported()){
+        const hls = new Hls();
+        hls.loadSource(channel.url);
+        hls.attachMedia(video);
+    } else {
+        video.src = channel.url;
+    }
+
+    const cards = document.querySelectorAll('.channel');
+    cards.forEach(el => el.classList.remove('active'));
+    
+    if(cards[index]) {
+        cards[index].classList.add('active');
+        cards[index].scrollIntoView({ behavior: 'smooth', block: 'nearest', inline: 'center' });
+    }
+}
+
+/* LIST BUTTONS SCROLL FUNCTION */
+function scrollCarousel(direction) {
+    const carousel = document.getElementById('channelGrid');
+    const scrollAmount = 350 * direction; 
+    carousel.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+}
+
+/* NEXT */
+function nextChannel(){
+    currentIndex++;
+    if(currentIndex >= channels.length){
+        currentIndex = 0;
+    }
+    playChannel(currentIndex);
+}
+
+/* PREV */
+function prevChannel(){
+    currentIndex--;
+    if(currentIndex < 0){
+        currentIndex = channels.length - 1;
+    }
+    playChannel(currentIndex);
+}
+
+/* PLAY PAUSE */
+function togglePlay(){
+    const video = document.getElementById('video');
+    if(video.paused){
+        video.play();
+    } else {
+        video.pause();
+    }
+}
+
+/* AUTO HIDE CONTROLS */
+const controls = document.querySelector('.custom-controls');
+let fadeTimeout;
+
+function hideControls() {
+    fadeTimeout = setTimeout(()=>{
+        controls.style.opacity = '0';
+    }, 5000);
+}
+
+hideControls();
+
+/* SHOW AGAIN */
+document.querySelector('.player-box').addEventListener('click',()=>{
+    clearTimeout(fadeTimeout);
+    controls.style.opacity = '1';
+    hideControls();
+});
+</script>
+
+</body>
+</html>
